@@ -9,17 +9,27 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@rainbow-me/rainbowkit": "^2.0.1",
+    "@safe-global/api-kit": "^2.2.0",
+    "@safe-global/auth-kit": "^2.0.2",
+    "@safe-global/onramp-kit": "^3.0.1",
+    "@stripe/crypto": "^0.0.4",
+    "@stripe/stripe-js": "^3.0.6",
+    "@tanstack/react-query": "^5.24.1",
+    "@web3auth/safeauth-embed": "^0.0.0",
+    "next": "14.1.0",
     "react": "^18",
     "react-dom": "^18",
-    "next": "14.1.0"
+    "viem": "^2.7.16",
+    "wagmi": "^2.5.7"
   },
   "devDependencies": {
-    "typescript": "^5",
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",
     "autoprefixer": "^10.0.1",
     "postcss": "^8",
-    "tailwindcss": "^3.3.0"
+    "tailwindcss": "^3.3.0",
+    "typescript": "^5"
   }
 }
