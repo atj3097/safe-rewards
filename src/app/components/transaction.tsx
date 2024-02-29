@@ -24,8 +24,7 @@ export const Transaction: React.FC<TransactionProps> = ({ placeholder, action })
 
   return (
     <div className="flex flex-col">
-      <Text color="green">{placeholder}</Text>
-      <Button onClick={handleSubmit} color="green">Submit</Button>
+      <Button onClick={handleSubmit} color="green">{placeholder}</Button>
     </div>
   );
 }

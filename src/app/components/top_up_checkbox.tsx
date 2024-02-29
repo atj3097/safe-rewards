@@ -5,7 +5,7 @@ export default function TopUpCheckbox() {
     return (
         <div className="flex flex-col">
         <Checkbox color="green" />
-        <Text> Top Up Your Safe Account</Text>
+        <Text>Automatically Top Up My Safe Account</Text>
         </div>
     );
 }
