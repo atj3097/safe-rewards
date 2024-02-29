@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@radix-ui/themes": "^2.0.3",
     "@rainbow-me/rainbowkit": "^2.0.1",
     "@safe-global/api-kit": "^2.2.0",
     "@safe-global/auth-kit": "^2.0.2",
