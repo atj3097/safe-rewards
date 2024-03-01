@@ -21,16 +21,19 @@ const renderOptions = purchaseOptions.map((option) => {
 
 export default function Home() {
   return (
-    <main className="flex flex-col min-h-screen items-center justify-center p-6 bg-white"> {/* Adjust styles for centering */}
-      <div className="flex flex-col w-full p-6"> 
-        <div className="flex justify-between items-center mb-6">
+    <>
+      <div className="w-full p-4 fixed top-0 left-0 bg-white z-10 shadow-md">
+        <div className="max-w-4xl mx-auto flex justify-between ">
           <Text color='green' className="text-2xl font-bold">Loyalty Rewards w/ Safe Smart Account</Text>
-          <ClaimPoints />
-        </div>
-        <Card className="flex flex-col items-center justify-center p-6 bg-white shadow-lg rounded-lg mx-auto"> {/* Card component wrapping the content */}
-          <div className="mb-6">
+          <div className="flex items-center justify-between w-1/3">
             <XdaiBalance balance="4.00" />
+            <ClaimPoints />
           </div>
+        </div>
+      </div>
+    <main className="flex flex-col min-h-screen items-center justify-center p-6 bg-white"> 
+      <div className="flex flex-col w-full p-6"> 
+        <Card className="flex flex-col items-center justify-center p-6 bg-white shadow-lg rounded-lg mx-auto"> 
           <div className="mb-6"> 
             <TopUpCheckbox />
           </div>
@@ -43,5 +46,6 @@ export default function Home() {
         </Card>
       </div>
     </main>
+    </>
   );
 }
