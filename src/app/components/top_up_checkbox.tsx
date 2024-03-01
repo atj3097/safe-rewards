@@ -3,10 +3,9 @@ import { Text } from "@radix-ui/themes";
 
 export default function TopUpCheckbox() {
     return (
-        <div className="flex flex-col">
-        <Checkbox color="green" />
-        <Text>Automatically Top Up My Safe Account</Text>
+        <div className="flex justify-between">
+            <Checkbox color="green" />
+            <Text color="green" size="2" weight="bold">Automatically Top Up My Safe Account</Text>
         </div>
     );
 }
-

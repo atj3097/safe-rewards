@@ -34,9 +34,9 @@ export default function Home() {
     <main className="flex flex-col min-h-screen items-center justify-center p-6 bg-white"> 
       <div className="flex flex-col w-full p-6"> 
         <Card className="flex flex-col items-center justify-center p-6 bg-white shadow-lg rounded-lg mx-auto"> 
-          <div className="mb-6"> 
+          {/* <div className="mb-6"> 
             <TopUpCheckbox />
-          </div>
+          </div> */}
           <div className="flex flex-col w-full mb-6">
             {renderOptions}
           </div>
