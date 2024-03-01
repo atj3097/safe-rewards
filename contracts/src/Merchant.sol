@@ -1,5 +1,5 @@
 // SPDX-License-Identifier: UNLICENSED
-pragma solidity ^0.8.20;
+pragma solidity ^0.8.19;
 
 import "@openzeppelin/contracts/token/ERC20/IERC20.sol";
 import "@openzeppelin/contracts/token/ERC721/extensions/ERC721URIStorage.sol";
@@ -17,25 +17,19 @@ contract Merchant is ERC721URIStorage, Ownable {
     mapping(string => Product) public products;
     mapping(address => uint256) public points;
     mapping(address => uint256) public totalPurchases;
-    address owner;
 
     event ProductPurchased(address indexed customer, string productId, uint256 tokenId, uint256 pointsAwarded);
     event PointsRedeemed(address indexed customer, uint256 points);
     event AirdropClaimed(address indexed customer, uint256 tokenAmount);
 
-    constructor(address merchantTokenAddress) ERC721("MerchantReceipt", "MRCPT") {
+    constructor(address merchantTokenAddress) ERC721("MerchantReceipt", "MRCPT") Ownable(msg.sender){
         merchantToken = IERC20(merchantTokenAddress);
-        owner = msg.sender;
     }
 
     function addProduct(string memory _id, uint256 _price, uint256 _points) public onlyOwner {
         products[_id] = Product(_price, _points);
     }
 
-    modifier onlyOwner() {
-        require(msg.sender == owner(), "Caller is not the owner");
-        _;
-    }
 
     function purchaseProduct(string memory productId) external payable {
         Product memory product = products[productId];
